@@ -110,15 +110,15 @@ export default function Page() {
     // ========================= render ========================
     return (
         <div className='w-full h-screen overflow-y-scroll fixed top-0 z-50 bg-background '>
-            <div className='mx-auto max-w-screen-2xl'>
+            <div className='mx-auto max-w-screen-2xl px-4 lg:px-0'>
                 <ShopNavbar getCartDetails={getCartDetails} customer={customer} removeFromCart={removeFromCart} updateCartQuantity={updateCartQuantity} addToCart={addToCart} />
             </div>
 
 
-            <div className="mx-auto max-w-screen-2xl ">
-                <div className="relative h-[400px] rounded-lg bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url(https://static.vecteezy.com/system/resources/thumbnails/001/338/250/small_2x/black-friday-sale-banner-free-vector.jpg)" }}>
+            <div className="mx-auto max-w-screen-2xl px-4 lg:px-0' ">
+                <div className="relative h-[200px] lg:h-[400px] rounded-lg bg-cover bg-center bg-no-repeat shadow-lg" style={{ backgroundImage: "url(https://static.vecteezy.com/system/resources/thumbnails/001/338/250/small_2x/black-friday-sale-banner-free-vector.jpg)" }}>
                     <div className="px-4 pt-8 pb-10">
-                        <div className="absolute inset-x-0 -bottom-10 mx-auto w-36 rounded-full border-8 border-white shadow-lg">
+                        <div className="absolute inset-x-0 -bottom-10 mx-auto w-32 rounded-full border-8 border-white shadow-lg">
                             <span className="absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2"></span>
                             <img className="mx-auto h-auto w-full rounded-full" src="https://img.freepik.com/free-vector/gradient-abstract-logo-flat-design_23-2148203400.jpg?uid=R135031770&ga=GA1.1.366406594.1732686458&semt=ais_hybrid" alt="" />
                         </div>
