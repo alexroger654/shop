@@ -3,7 +3,7 @@
 import React from 'react'
 import { useRouter } from "next/navigation";
 import { useLayoutEffect } from "react";
-export default function page() {
+export default function Page() {
 
 
   const router = useRouter()
