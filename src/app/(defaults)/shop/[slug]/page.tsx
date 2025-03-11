@@ -20,7 +20,7 @@ interface ICategoryData {
 
 
 
-export default function page() {
+export default function Page() {
 
     const [cart, setCart] = useState<{ product: IProduct; quantity: number }[]>([]);
 

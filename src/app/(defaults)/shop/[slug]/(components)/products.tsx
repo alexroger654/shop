@@ -1,4 +1,5 @@
-import { IProduct } from '@/shared/interface/product.interface'
+
+import { IProduct } from '@/shared/interfaces/product.interface'
 import React from 'react'
 
 export default function Products({ categoryName, products, addToCart }: {
@@ -12,7 +13,7 @@ export default function Products({ categoryName, products, addToCart }: {
                 <h2 className="font-manrope font-bold text-3xl min-[400px]:text-4xl text-black mb-8 max-lg:text-center">{categoryName}</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     {
-                        products?.map(item => <a href="javascript:;" className="max-w-[384px] mx-auto">
+                        products?.map(item => <div key={item?._id} className="max-w-[384px] mx-auto">
                             <div className="w-full max-w-sm aspect-square">
                                 <img src={item?.imageUrl[0]} alt="cream image" className="w-full h-full rounded-xl object-cover" />
                             </div>
@@ -33,7 +34,7 @@ export default function Products({ categoryName, products, addToCart }: {
                                     </svg>
                                 </button>
                             </div>
-                        </a>)
+                        </div>)
                     }
 
 
