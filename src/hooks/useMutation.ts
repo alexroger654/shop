@@ -11,7 +11,7 @@ export const useMutation = <T>() => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`http://89.116.121.214:5000/api/v1/${param}`, {
+            const response = await fetch(`http://20.193.155.204:5000/api/v1/${param}`, {
                 method,
                 headers: {
                     'Content-Type': 'application/json',

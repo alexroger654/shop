@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/sheet"
 import CartModal from './cart-modal'
 import { Badge } from '@/components/ui/badge'
-
 export default function ShopNavbar({ removeFromCart, addToCart, getCartDetails, updateCartQuantity, customer }: any) {
     return (
 
@@ -39,7 +38,6 @@ export default function ShopNavbar({ removeFromCart, addToCart, getCartDetails, 
 
                                         </Badge> : <></>
                                     }
-
                                     <ShoppingBag />
                                 </button>
                             </SheetTrigger>

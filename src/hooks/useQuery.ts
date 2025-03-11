@@ -13,7 +13,7 @@ export const useQuery = <T>(param: string, options: FetchOptions = {}) => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`http://89.116.121.214:5000/api/v1/${param}`, { ...options, method: 'GET' });
+            const response = await fetch(`http://20.193.155.204:5000/api/v1/${param}`, { ...options, method: 'GET' });
             const result: T = await response.json();
             if (!response.ok) {
                 throw new Error(result as unknown as string || 'Something went wrong');

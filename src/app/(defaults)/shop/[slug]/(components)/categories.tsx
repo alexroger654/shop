@@ -1,6 +1,5 @@
 'use client';
 
-import { IProductCategory } from '@/shared/interfaces/product.category.interface';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -24,15 +23,35 @@ const responsive = {
     },
 };
 
+const categories = [
+    {
+        title: 'For Women',
+        products: '3,495 Products',
+        image: 'https://via.placeholder.com/300x200', // Replace with actual image
+    },
+    {
+        title: 'For Men',
+        products: '2,847 Products',
+        image: 'https://via.placeholder.com/300x200',
+    },
+    {
+        title: 'For Kids',
+        products: '385 Products',
+        image: 'https://via.placeholder.com/300x200',
+    },
+    {
+        title: 'Accessories',
+        products: '2,483 Products',
+        image: 'https://via.placeholder.com/300x200',
+    },
+    {
+        title: 'Accessories',
+        products: '2,483 Products',
+        image: 'https://via.placeholder.com/300x200',
+    },
+];
 
-
-export default function Categories({ data }: any) {
-
-
-    console.log(data?.category, "|||||||||||||||||||||||||||||||||||||")
-
-
-    // =================== redender
+export default function Categories() {
     return (
         <div className=" w-full mx-auto">
             <h2 className="text-2xl font-bold mb-6">Popular Categories</h2>
@@ -49,14 +68,13 @@ export default function Categories({ data }: any) {
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 containerClass="gap-4 py-8 "
             >
-
-                {data?.category?.map((category: any, index: number) => (
+                {categories.map((category, index) => (
                     <div key={index} className="relative rounded-lg overflow-hidden shadow-lg mx-2">
-                        <img src={category?.imageUrl} alt={category?.name} className="w-full h-36 md:h-56 object-cover" />
+                        <img src={category.image} alt={category.title} className="w-full h-36 md:h-56 object-cover" />
                         <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end p-4 text-white">
-                            <h3 className=" text-xs md:text-lg font-semibold">{category.name}</h3>
-                            {/* <p className="text-[8px]  md:text-sm">{category.products}</p> */}
-                            <button className="mt-2 bg-white w-24 text-black py-2 px-4 text-[8px] md:text-sm font-medium rounded">
+                            <h3 className=" text-xs md:text-lg font-semibold">{category.title}</h3>
+                            <p className="text-[8px]  md:text-sm">{category.products}</p>
+                            <button className="mt-2 bg-white text-black py-2 px-4 text-[8px] md:text-sm font-medium rounded">
                                 Shop Now
                             </button>
                         </div>
